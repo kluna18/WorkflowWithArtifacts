@@ -1,1 +1,22 @@
 name: WorkflowWithArtifact
+
+on: push
+
+env:
+  FILE_NAME: cloudbees-support_cloudbees-ci-operations-center-dev-jenkinsoc.albertsons.com_2022-08-26_01.11.26.zip
+  
+jobs:
+  build:
+    name: CheckoutUpload
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: Checkout Artifacts
+        uses: actions/checkout@v1
+        
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1.0.0
+        with:
+          name: linux
+          path: ./${{env.FILE_NAME}}
+       
