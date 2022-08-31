@@ -3,7 +3,7 @@ name: WorkflowWithArtifact
 on: push
 
 env:
-  FILE_NAME: cloudbees-support_cloudbees-ci-operations-center-dev-jenkinsoc.albertsons.com_2022-08-26_01.11.26.zip
+  FILE_NAME: 26.zip
   
 jobs:
   build:
